@@ -1,0 +1,699 @@
+[
+    {
+        "id": 0,
+        "name": "Exit 99",
+        "type": "EXIT",
+        "capacity": 15,
+        "currentOccupation": 15,
+        "occupied": true,
+        "access": [
+            "Cleaner",
+            "Visitor",
+            "Doctor",
+            "Security",
+            "Nurse",
+            "Administrator",
+            "Patient"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Exit 45",
+        "type": "EXIT",
+        "capacity": 16,
+        "currentOccupation": 14,
+        "occupied": false,
+        "access": [
+            "Doctor",
+            "Visitor",
+            "Cleaner",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Exit 98",
+        "type": "EXIT",
+        "capacity": 6,
+        "currentOccupation": 5,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Patient",
+            "Nurse"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Exit 68",
+        "type": "EXIT",
+        "capacity": 9,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Nurse"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Exit 14",
+        "type": "EXIT",
+        "capacity": 18,
+        "currentOccupation": 18,
+        "occupied": true,
+        "access": [
+            "Cleaner",
+            "Security"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Exit 55",
+        "type": "EXIT",
+        "capacity": 19,
+        "currentOccupation": 9,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Patient",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Exit 69",
+        "type": "EXIT",
+        "capacity": 19,
+        "currentOccupation": 18,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Patient"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Recovery 52",
+        "type": "Recovery",
+        "capacity": 2,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Doctor",
+            "Visitor",
+            "Security",
+            "Patient",
+            "Cleaner",
+            "Nurse",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Hospitalization 37",
+        "type": "Hospitalization",
+        "capacity": 26,
+        "currentOccupation": 10,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Administrator",
+            "Visitor",
+            "Doctor",
+            "Security"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Recovery 67",
+        "type": "Recovery",
+        "capacity": 27,
+        "currentOccupation": 15,
+        "occupied": false,
+        "access": [
+            "Administrator",
+            "Visitor",
+            "Nurse",
+            "Patient"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Storage 62",
+        "type": "Storage",
+        "capacity": 1,
+        "currentOccupation": 1,
+        "occupied": true,
+        "access": [
+            "Security"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Imaging 74",
+        "type": "Imaging",
+        "capacity": 10,
+        "currentOccupation": 5,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Canteen 2",
+        "type": "Canteen",
+        "capacity": 29,
+        "currentOccupation": 17,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Administrator",
+            "Visitor",
+            "Security"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Kitchen 29",
+        "type": "Kitchen",
+        "capacity": 4,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Administrator",
+            "Visitor",
+            "Nurse",
+            "Cleaner",
+            "Patient",
+            "Doctor",
+            "Security"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Reception 25",
+        "type": "Reception",
+        "capacity": 13,
+        "currentOccupation": 9,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Bathroom 51",
+        "type": "Bathroom",
+        "capacity": 26,
+        "currentOccupation": 23,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Patient",
+            "Doctor",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Reception 2",
+        "type": "Reception",
+        "capacity": 11,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Doctor",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Laundry 98",
+        "type": "Laundry",
+        "capacity": 21,
+        "currentOccupation": 18,
+        "occupied": false,
+        "access": [
+            "Administrator",
+            "Doctor"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Library 32",
+        "type": "Library",
+        "capacity": 4,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Administrator",
+            "Nurse"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Church 10",
+        "type": "Church",
+        "capacity": 4,
+        "currentOccupation": 4,
+        "occupied": true,
+        "access": [
+            "Administrator"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Hospitalization 82",
+        "type": "Hospitalization",
+        "capacity": 26,
+        "currentOccupation": 26,
+        "occupied": true,
+        "access": [
+            "Patient",
+            "Security",
+            "Doctor",
+            "Nurse",
+            "Cleaner",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Emergency 28",
+        "type": "Emergency",
+        "capacity": 21,
+        "currentOccupation": 5,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Doctor",
+            "Administrator",
+            "Patient",
+            "Cleaner",
+            "Nurse",
+            "Security"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Kitchen 71",
+        "type": "Kitchen",
+        "capacity": 8,
+        "currentOccupation": 2,
+        "occupied": false,
+        "access": [
+            "Visitor",
+            "Doctor",
+            "Patient",
+            "Nurse"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Imaging 20",
+        "type": "Imaging",
+        "capacity": 17,
+        "currentOccupation": 14,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Administrator",
+            "Cleaner",
+            "Visitor"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Recovery 34",
+        "type": "Recovery",
+        "capacity": 5,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Doctor",
+            "Patient",
+            "Cleaner",
+            "Security",
+            "Visitor"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Storage 90",
+        "type": "Storage",
+        "capacity": 20,
+        "currentOccupation": 13,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Security",
+            "Administrator",
+            "Cleaner",
+            "Visitor",
+            "Patient"
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Imaging 85",
+        "type": "Imaging",
+        "capacity": 2,
+        "currentOccupation": 1,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Cleaner",
+            "Doctor",
+            "Visitor",
+            "Administrator",
+            "Patient"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Cafe 94",
+        "type": "Cafe",
+        "capacity": 24,
+        "currentOccupation": 18,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Administrator",
+            "Nurse",
+            "Visitor"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Library 61",
+        "type": "Library",
+        "capacity": 13,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Doctor",
+            "Administrator",
+            "Nurse",
+            "Visitor"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Surgery 29",
+        "type": "Surgery",
+        "capacity": 7,
+        "currentOccupation": 2,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Administrator",
+            "Security",
+            "Patient"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Reception 49",
+        "type": "Reception",
+        "capacity": 1,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Nurse"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Church 24",
+        "type": "Church",
+        "capacity": 15,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Security",
+            "Administrator",
+            "Nurse"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Recovery 37",
+        "type": "Recovery",
+        "capacity": 10,
+        "currentOccupation": 10,
+        "occupied": true,
+        "access": [
+            "Security",
+            "Visitor",
+            "Patient",
+            "Doctor",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Common 33",
+        "type": "Common",
+        "capacity": 7,
+        "currentOccupation": 5,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Patient",
+            "Nurse",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Pharmacy 94",
+        "type": "Pharmacy",
+        "capacity": 13,
+        "currentOccupation": 7,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Patient",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Restroom 21",
+        "type": "Restroom",
+        "capacity": 25,
+        "currentOccupation": 13,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Administrator",
+            "Patient",
+            "Doctor",
+            "Nurse",
+            "Visitor",
+            "Security"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Surgery 26",
+        "type": "Surgery",
+        "capacity": 30,
+        "currentOccupation": 30,
+        "occupied": true,
+        "access": [
+            "Doctor"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Bathroom 5",
+        "type": "Bathroom",
+        "capacity": 5,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Nurse",
+            "Security"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Hospitalization 58",
+        "type": "Hospitalization",
+        "capacity": 23,
+        "currentOccupation": 8,
+        "occupied": false,
+        "access": [
+            "Administrator",
+            "Nurse",
+            "Visitor",
+            "Security",
+            "Doctor",
+            "Patient",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Surgery 59",
+        "type": "Surgery",
+        "capacity": 15,
+        "currentOccupation": 4,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Patient",
+            "Nurse",
+            "Security",
+            "Administrator",
+            "Doctor"
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Laboratory 95",
+        "type": "Laboratory",
+        "capacity": 19,
+        "currentOccupation": 4,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Administrator",
+            "Nurse",
+            "Visitor",
+            "Security",
+            "Doctor"
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Reception 100",
+        "type": "Reception",
+        "capacity": 24,
+        "currentOccupation": 21,
+        "occupied": false,
+        "access": [
+            "Doctor",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Cafe 22",
+        "type": "Cafe",
+        "capacity": 16,
+        "currentOccupation": 9,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Cleaner",
+            "Doctor",
+            "Visitor",
+            "Nurse",
+            "Patient"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Church 73",
+        "type": "Church",
+        "capacity": 29,
+        "currentOccupation": 27,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Visitor",
+            "Cleaner",
+            "Patient",
+            "Administrator"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Emergency 46",
+        "type": "Emergency",
+        "capacity": 8,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Doctor"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Storage 15",
+        "type": "Storage",
+        "capacity": 15,
+        "currentOccupation": 13,
+        "occupied": false,
+        "access": [
+            "Cleaner",
+            "Security"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Office 94",
+        "type": "Office",
+        "capacity": 11,
+        "currentOccupation": 8,
+        "occupied": false,
+        "access": [
+            "Security",
+            "Nurse",
+            "Administrator",
+            "Doctor",
+            "Visitor",
+            "Patient",
+            "Cleaner"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Restroom 62",
+        "type": "Restroom",
+        "capacity": 12,
+        "currentOccupation": 4,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Doctor",
+            "Patient",
+            "Visitor"
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Restroom 93",
+        "type": "Restroom",
+        "capacity": 3,
+        "currentOccupation": 0,
+        "occupied": false,
+        "access": [
+            "Nurse",
+            "Administrator",
+            "Visitor",
+            "Patient"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Surgery 83",
+        "type": "Surgery",
+        "capacity": 6,
+        "currentOccupation": 3,
+        "occupied": false,
+        "access": [
+            "Cleaner"
+        ]
+    }
+]

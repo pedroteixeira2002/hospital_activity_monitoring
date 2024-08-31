@@ -1,0 +1,68 @@
+plugins {
+    id 'java'
+    id 'pmd'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation files('src/libs/Data-Structures.jar')
+    testImplementation 'org.mockito:mockito-core:5.5.0'
+
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation 'org.graphstream:gs-core:1.3'
+    implementation 'org.graphstream:gs-ui:1.3'
+
+}
+
+application {
+    mainClassName = 'src/main/java/client/DemoHospital.java'
+}
+
+task hospitalJar(type: Jar) {
+    archiveBaseName.set('hospital')
+    archiveVersion.set('1.0')
+    from sourceSets.main.output
+    include 'src/main/java/hospital/**'
+}
+
+task demoJar(type: Jar) {
+    manifest {
+        attributes(
+                'Main-Class': 'client.DemoHospital' // Correct path to the main class without 'src/main/java'
+        )
+    }
+    from sourceSets.main.allSource
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+    archiveBaseName.set('DemoHospital')
+    archiveVersion.set('1.0')
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+run {
+    dependsOn 'demoJar'
+    standardInput = System.in
+}
+
+
+test {
+    useJUnitPlatform()
+}
+pmd {
+    consoleOutput = true
+    rulesMinimumPriority = 5
+    ruleSetFiles = files("src/main/resources/ruleset.xml")
+
+}

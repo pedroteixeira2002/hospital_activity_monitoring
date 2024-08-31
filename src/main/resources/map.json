@@ -1,0 +1,1832 @@
+[
+    {
+        "room1": 0,
+        "weight": 15,
+        "room2": 2
+    },
+    {
+        "room1": 0,
+        "weight": 4,
+        "room2": 3
+    },
+    {
+        "room1": 0,
+        "weight": 10,
+        "room2": 5
+    },
+    {
+        "room1": 0,
+        "weight": 8,
+        "room2": 10
+    },
+    {
+        "room1": 0,
+        "weight": 5,
+        "room2": 12
+    },
+    {
+        "room1": 0,
+        "weight": 19,
+        "room2": 14
+    },
+    {
+        "room1": 0,
+        "weight": 16,
+        "room2": 16
+    },
+    {
+        "room1": 0,
+        "weight": 3,
+        "room2": 19
+    },
+    {
+        "room1": 0,
+        "weight": 18,
+        "room2": 20
+    },
+    {
+        "room1": 0,
+        "weight": 3,
+        "room2": 21
+    },
+    {
+        "room1": 0,
+        "weight": 10,
+        "room2": 23
+    },
+    {
+        "room1": 0,
+        "weight": 11,
+        "room2": 29
+    },
+    {
+        "room1": 0,
+        "weight": 3,
+        "room2": 33
+    },
+    {
+        "room1": 0,
+        "weight": 2,
+        "room2": 35
+    },
+    {
+        "room1": 0,
+        "weight": 12,
+        "room2": 39
+    },
+    {
+        "room1": 0,
+        "weight": 4,
+        "room2": 40
+    },
+    {
+        "room1": 0,
+        "weight": 5,
+        "room2": 44
+    },
+    {
+        "room1": 0,
+        "weight": 3,
+        "room2": 46
+    },
+    {
+        "room1": 0,
+        "weight": 17,
+        "room2": 48
+    },
+    {
+        "room1": 1,
+        "weight": 2,
+        "room2": 5
+    },
+    {
+        "room1": 1,
+        "weight": 7,
+        "room2": 6
+    },
+    {
+        "room1": 1,
+        "weight": 7,
+        "room2": 9
+    },
+    {
+        "room1": 1,
+        "weight": 15,
+        "room2": 10
+    },
+    {
+        "room1": 1,
+        "weight": 3,
+        "room2": 11
+    },
+    {
+        "room1": 1,
+        "weight": 19,
+        "room2": 14
+    },
+    {
+        "room1": 1,
+        "weight": 5,
+        "room2": 15
+    },
+    {
+        "room1": 1,
+        "weight": 1,
+        "room2": 16
+    },
+    {
+        "room1": 1,
+        "weight": 2,
+        "room2": 17
+    },
+    {
+        "room1": 1,
+        "weight": 6,
+        "room2": 18
+    },
+    {
+        "room1": 1,
+        "weight": 13,
+        "room2": 22
+    },
+    {
+        "room1": 1,
+        "weight": 8,
+        "room2": 23
+    },
+    {
+        "room1": 1,
+        "weight": 7,
+        "room2": 24
+    },
+    {
+        "room1": 1,
+        "weight": 20,
+        "room2": 28
+    },
+    {
+        "room1": 1,
+        "weight": 5,
+        "room2": 31
+    },
+    {
+        "room1": 1,
+        "weight": 15,
+        "room2": 32
+    },
+    {
+        "room1": 1,
+        "weight": 1,
+        "room2": 35
+    },
+    {
+        "room1": 1,
+        "weight": 13,
+        "room2": 37
+    },
+    {
+        "room1": 1,
+        "weight": 3,
+        "room2": 38
+    },
+    {
+        "room1": 1,
+        "weight": 15,
+        "room2": 44
+    },
+    {
+        "room1": 2,
+        "weight": 17,
+        "room2": 5
+    },
+    {
+        "room1": 2,
+        "weight": 10,
+        "room2": 6
+    },
+    {
+        "room1": 2,
+        "weight": 11,
+        "room2": 9
+    },
+    {
+        "room1": 2,
+        "weight": 1,
+        "room2": 19
+    },
+    {
+        "room1": 2,
+        "weight": 6,
+        "room2": 24
+    },
+    {
+        "room1": 2,
+        "weight": 11,
+        "room2": 28
+    },
+    {
+        "room1": 2,
+        "weight": 16,
+        "room2": 35
+    },
+    {
+        "room1": 2,
+        "weight": 11,
+        "room2": 38
+    },
+    {
+        "room1": 2,
+        "weight": 12,
+        "room2": 40
+    },
+    {
+        "room1": 2,
+        "weight": 4,
+        "room2": 41
+    },
+    {
+        "room1": 2,
+        "weight": 4,
+        "room2": 42
+    },
+    {
+        "room1": 2,
+        "weight": 19,
+        "room2": 45
+    },
+    {
+        "room1": 2,
+        "weight": 14,
+        "room2": 47
+    },
+    {
+        "room1": 3,
+        "weight": 9,
+        "room2": 5
+    },
+    {
+        "room1": 3,
+        "weight": 15,
+        "room2": 11
+    },
+    {
+        "room1": 3,
+        "weight": 7,
+        "room2": 14
+    },
+    {
+        "room1": 3,
+        "weight": 8,
+        "room2": 15
+    },
+    {
+        "room1": 3,
+        "weight": 7,
+        "room2": 17
+    },
+    {
+        "room1": 3,
+        "weight": 12,
+        "room2": 20
+    },
+    {
+        "room1": 3,
+        "weight": 9,
+        "room2": 25
+    },
+    {
+        "room1": 3,
+        "weight": 11,
+        "room2": 34
+    },
+    {
+        "room1": 3,
+        "weight": 5,
+        "room2": 36
+    },
+    {
+        "room1": 3,
+        "weight": 16,
+        "room2": 39
+    },
+    {
+        "room1": 3,
+        "weight": 4,
+        "room2": 40
+    },
+    {
+        "room1": 3,
+        "weight": 17,
+        "room2": 42
+    },
+    {
+        "room1": 3,
+        "weight": 13,
+        "room2": 44
+    },
+    {
+        "room1": 3,
+        "weight": 17,
+        "room2": 47
+    },
+    {
+        "room1": 3,
+        "weight": 19,
+        "room2": 48
+    },
+    {
+        "room1": 4,
+        "weight": 14,
+        "room2": 12
+    },
+    {
+        "room1": 4,
+        "weight": 7,
+        "room2": 15
+    },
+    {
+        "room1": 4,
+        "weight": 10,
+        "room2": 16
+    },
+    {
+        "room1": 4,
+        "weight": 10,
+        "room2": 19
+    },
+    {
+        "room1": 4,
+        "weight": 2,
+        "room2": 20
+    },
+    {
+        "room1": 4,
+        "weight": 11,
+        "room2": 22
+    },
+    {
+        "room1": 4,
+        "weight": 12,
+        "room2": 23
+    },
+    {
+        "room1": 4,
+        "weight": 4,
+        "room2": 24
+    },
+    {
+        "room1": 4,
+        "weight": 7,
+        "room2": 27
+    },
+    {
+        "room1": 4,
+        "weight": 15,
+        "room2": 29
+    },
+    {
+        "room1": 4,
+        "weight": 1,
+        "room2": 33
+    },
+    {
+        "room1": 4,
+        "weight": 6,
+        "room2": 34
+    },
+    {
+        "room1": 4,
+        "weight": 15,
+        "room2": 44
+    },
+    {
+        "room1": 4,
+        "weight": 6,
+        "room2": 46
+    },
+    {
+        "room1": 5,
+        "weight": 12,
+        "room2": 8
+    },
+    {
+        "room1": 5,
+        "weight": 12,
+        "room2": 13
+    },
+    {
+        "room1": 5,
+        "weight": 13,
+        "room2": 15
+    },
+    {
+        "room1": 5,
+        "weight": 14,
+        "room2": 16
+    },
+    {
+        "room1": 5,
+        "weight": 1,
+        "room2": 17
+    },
+    {
+        "room1": 5,
+        "weight": 6,
+        "room2": 18
+    },
+    {
+        "room1": 5,
+        "weight": 6,
+        "room2": 23
+    },
+    {
+        "room1": 5,
+        "weight": 5,
+        "room2": 27
+    },
+    {
+        "room1": 5,
+        "weight": 2,
+        "room2": 29
+    },
+    {
+        "room1": 5,
+        "weight": 20,
+        "room2": 30
+    },
+    {
+        "room1": 5,
+        "weight": 1,
+        "room2": 31
+    },
+    {
+        "room1": 5,
+        "weight": 8,
+        "room2": 32
+    },
+    {
+        "room1": 5,
+        "weight": 5,
+        "room2": 37
+    },
+    {
+        "room1": 5,
+        "weight": 17,
+        "room2": 38
+    },
+    {
+        "room1": 5,
+        "weight": 13,
+        "room2": 44
+    },
+    {
+        "room1": 5,
+        "weight": 12,
+        "room2": 47
+    },
+    {
+        "room1": 5,
+        "weight": 15,
+        "room2": 49
+    },
+    {
+        "room1": 6,
+        "weight": 8,
+        "room2": 15
+    },
+    {
+        "room1": 6,
+        "weight": 6,
+        "room2": 22
+    },
+    {
+        "room1": 6,
+        "weight": 15,
+        "room2": 23
+    },
+    {
+        "room1": 6,
+        "weight": 13,
+        "room2": 27
+    },
+    {
+        "room1": 6,
+        "weight": 12,
+        "room2": 29
+    },
+    {
+        "room1": 6,
+        "weight": 19,
+        "room2": 31
+    },
+    {
+        "room1": 6,
+        "weight": 1,
+        "room2": 34
+    },
+    {
+        "room1": 6,
+        "weight": 12,
+        "room2": 36
+    },
+    {
+        "room1": 6,
+        "weight": 10,
+        "room2": 40
+    },
+    {
+        "room1": 6,
+        "weight": 19,
+        "room2": 43
+    },
+    {
+        "room1": 6,
+        "weight": 2,
+        "room2": 46
+    },
+    {
+        "room1": 6,
+        "weight": 18,
+        "room2": 47
+    },
+    {
+        "room1": 7,
+        "weight": 10,
+        "room2": 8
+    },
+    {
+        "room1": 7,
+        "weight": 6,
+        "room2": 15
+    },
+    {
+        "room1": 7,
+        "weight": 10,
+        "room2": 17
+    },
+    {
+        "room1": 7,
+        "weight": 13,
+        "room2": 26
+    },
+    {
+        "room1": 7,
+        "weight": 5,
+        "room2": 27
+    },
+    {
+        "room1": 7,
+        "weight": 10,
+        "room2": 30
+    },
+    {
+        "room1": 7,
+        "weight": 1,
+        "room2": 34
+    },
+    {
+        "room1": 7,
+        "weight": 7,
+        "room2": 37
+    },
+    {
+        "room1": 7,
+        "weight": 15,
+        "room2": 38
+    },
+    {
+        "room1": 7,
+        "weight": 13,
+        "room2": 46
+    },
+    {
+        "room1": 8,
+        "weight": 11,
+        "room2": 14
+    },
+    {
+        "room1": 8,
+        "weight": 19,
+        "room2": 17
+    },
+    {
+        "room1": 8,
+        "weight": 20,
+        "room2": 18
+    },
+    {
+        "room1": 8,
+        "weight": 15,
+        "room2": 22
+    },
+    {
+        "room1": 8,
+        "weight": 6,
+        "room2": 23
+    },
+    {
+        "room1": 8,
+        "weight": 15,
+        "room2": 24
+    },
+    {
+        "room1": 8,
+        "weight": 1,
+        "room2": 25
+    },
+    {
+        "room1": 8,
+        "weight": 11,
+        "room2": 28
+    },
+    {
+        "room1": 8,
+        "weight": 4,
+        "room2": 32
+    },
+    {
+        "room1": 8,
+        "weight": 14,
+        "room2": 38
+    },
+    {
+        "room1": 8,
+        "weight": 17,
+        "room2": 44
+    },
+    {
+        "room1": 8,
+        "weight": 12,
+        "room2": 46
+    },
+    {
+        "room1": 9,
+        "weight": 13,
+        "room2": 10
+    },
+    {
+        "room1": 9,
+        "weight": 4,
+        "room2": 12
+    },
+    {
+        "room1": 9,
+        "weight": 15,
+        "room2": 20
+    },
+    {
+        "room1": 9,
+        "weight": 5,
+        "room2": 26
+    },
+    {
+        "room1": 9,
+        "weight": 11,
+        "room2": 34
+    },
+    {
+        "room1": 9,
+        "weight": 5,
+        "room2": 36
+    },
+    {
+        "room1": 9,
+        "weight": 2,
+        "room2": 41
+    },
+    {
+        "room1": 9,
+        "weight": 4,
+        "room2": 42
+    },
+    {
+        "room1": 9,
+        "weight": 20,
+        "room2": 46
+    },
+    {
+        "room1": 9,
+        "weight": 19,
+        "room2": 48
+    },
+    {
+        "room1": 10,
+        "weight": 7,
+        "room2": 12
+    },
+    {
+        "room1": 10,
+        "weight": 16,
+        "room2": 13
+    },
+    {
+        "room1": 10,
+        "weight": 8,
+        "room2": 16
+    },
+    {
+        "room1": 10,
+        "weight": 8,
+        "room2": 18
+    },
+    {
+        "room1": 10,
+        "weight": 15,
+        "room2": 22
+    },
+    {
+        "room1": 10,
+        "weight": 17,
+        "room2": 27
+    },
+    {
+        "room1": 10,
+        "weight": 5,
+        "room2": 39
+    },
+    {
+        "room1": 10,
+        "weight": 8,
+        "room2": 43
+    },
+    {
+        "room1": 10,
+        "weight": 16,
+        "room2": 44
+    },
+    {
+        "room1": 10,
+        "weight": 15,
+        "room2": 45
+    },
+    {
+        "room1": 10,
+        "weight": 19,
+        "room2": 46
+    },
+    {
+        "room1": 11,
+        "weight": 9,
+        "room2": 16
+    },
+    {
+        "room1": 11,
+        "weight": 1,
+        "room2": 18
+    },
+    {
+        "room1": 11,
+        "weight": 2,
+        "room2": 20
+    },
+    {
+        "room1": 11,
+        "weight": 16,
+        "room2": 24
+    },
+    {
+        "room1": 11,
+        "weight": 9,
+        "room2": 26
+    },
+    {
+        "room1": 11,
+        "weight": 1,
+        "room2": 27
+    },
+    {
+        "room1": 11,
+        "weight": 3,
+        "room2": 30
+    },
+    {
+        "room1": 11,
+        "weight": 11,
+        "room2": 34
+    },
+    {
+        "room1": 11,
+        "weight": 9,
+        "room2": 35
+    },
+    {
+        "room1": 11,
+        "weight": 18,
+        "room2": 37
+    },
+    {
+        "room1": 11,
+        "weight": 18,
+        "room2": 41
+    },
+    {
+        "room1": 11,
+        "weight": 13,
+        "room2": 46
+    },
+    {
+        "room1": 11,
+        "weight": 9,
+        "room2": 48
+    },
+    {
+        "room1": 12,
+        "weight": 8,
+        "room2": 13
+    },
+    {
+        "room1": 12,
+        "weight": 8,
+        "room2": 14
+    },
+    {
+        "room1": 12,
+        "weight": 17,
+        "room2": 18
+    },
+    {
+        "room1": 12,
+        "weight": 3,
+        "room2": 19
+    },
+    {
+        "room1": 12,
+        "weight": 5,
+        "room2": 21
+    },
+    {
+        "room1": 12,
+        "weight": 19,
+        "room2": 38
+    },
+    {
+        "room1": 12,
+        "weight": 2,
+        "room2": 40
+    },
+    {
+        "room1": 12,
+        "weight": 2,
+        "room2": 42
+    },
+    {
+        "room1": 13,
+        "weight": 20,
+        "room2": 17
+    },
+    {
+        "room1": 13,
+        "weight": 7,
+        "room2": 18
+    },
+    {
+        "room1": 13,
+        "weight": 10,
+        "room2": 19
+    },
+    {
+        "room1": 13,
+        "weight": 7,
+        "room2": 23
+    },
+    {
+        "room1": 13,
+        "weight": 1,
+        "room2": 24
+    },
+    {
+        "room1": 13,
+        "weight": 8,
+        "room2": 25
+    },
+    {
+        "room1": 13,
+        "weight": 19,
+        "room2": 29
+    },
+    {
+        "room1": 13,
+        "weight": 3,
+        "room2": 30
+    },
+    {
+        "room1": 13,
+        "weight": 18,
+        "room2": 32
+    },
+    {
+        "room1": 13,
+        "weight": 3,
+        "room2": 34
+    },
+    {
+        "room1": 13,
+        "weight": 9,
+        "room2": 36
+    },
+    {
+        "room1": 13,
+        "weight": 1,
+        "room2": 38
+    },
+    {
+        "room1": 13,
+        "weight": 18,
+        "room2": 41
+    },
+    {
+        "room1": 13,
+        "weight": 16,
+        "room2": 42
+    },
+    {
+        "room1": 13,
+        "weight": 7,
+        "room2": 43
+    },
+    {
+        "room1": 13,
+        "weight": 11,
+        "room2": 46
+    },
+    {
+        "room1": 14,
+        "weight": 6,
+        "room2": 21
+    },
+    {
+        "room1": 14,
+        "weight": 14,
+        "room2": 25
+    },
+    {
+        "room1": 14,
+        "weight": 6,
+        "room2": 26
+    },
+    {
+        "room1": 14,
+        "weight": 7,
+        "room2": 29
+    },
+    {
+        "room1": 14,
+        "weight": 13,
+        "room2": 36
+    },
+    {
+        "room1": 14,
+        "weight": 17,
+        "room2": 37
+    },
+    {
+        "room1": 14,
+        "weight": 11,
+        "room2": 38
+    },
+    {
+        "room1": 14,
+        "weight": 12,
+        "room2": 39
+    },
+    {
+        "room1": 14,
+        "weight": 7,
+        "room2": 43
+    },
+    {
+        "room1": 15,
+        "weight": 14,
+        "room2": 17
+    },
+    {
+        "room1": 15,
+        "weight": 12,
+        "room2": 18
+    },
+    {
+        "room1": 15,
+        "weight": 15,
+        "room2": 19
+    },
+    {
+        "room1": 15,
+        "weight": 1,
+        "room2": 26
+    },
+    {
+        "room1": 15,
+        "weight": 18,
+        "room2": 27
+    },
+    {
+        "room1": 15,
+        "weight": 5,
+        "room2": 34
+    },
+    {
+        "room1": 15,
+        "weight": 17,
+        "room2": 35
+    },
+    {
+        "room1": 15,
+        "weight": 8,
+        "room2": 37
+    },
+    {
+        "room1": 15,
+        "weight": 15,
+        "room2": 39
+    },
+    {
+        "room1": 15,
+        "weight": 4,
+        "room2": 41
+    },
+    {
+        "room1": 15,
+        "weight": 8,
+        "room2": 44
+    },
+    {
+        "room1": 15,
+        "weight": 6,
+        "room2": 47
+    },
+    {
+        "room1": 15,
+        "weight": 9,
+        "room2": 49
+    },
+    {
+        "room1": 16,
+        "weight": 7,
+        "room2": 17
+    },
+    {
+        "room1": 16,
+        "weight": 10,
+        "room2": 20
+    },
+    {
+        "room1": 16,
+        "weight": 12,
+        "room2": 21
+    },
+    {
+        "room1": 16,
+        "weight": 8,
+        "room2": 22
+    },
+    {
+        "room1": 16,
+        "weight": 1,
+        "room2": 24
+    },
+    {
+        "room1": 16,
+        "weight": 11,
+        "room2": 25
+    },
+    {
+        "room1": 16,
+        "weight": 16,
+        "room2": 28
+    },
+    {
+        "room1": 16,
+        "weight": 4,
+        "room2": 35
+    },
+    {
+        "room1": 16,
+        "weight": 20,
+        "room2": 38
+    },
+    {
+        "room1": 16,
+        "weight": 4,
+        "room2": 44
+    },
+    {
+        "room1": 16,
+        "weight": 16,
+        "room2": 45
+    },
+    {
+        "room1": 17,
+        "weight": 1,
+        "room2": 35
+    },
+    {
+        "room1": 17,
+        "weight": 7,
+        "room2": 38
+    },
+    {
+        "room1": 17,
+        "weight": 9,
+        "room2": 39
+    },
+    {
+        "room1": 17,
+        "weight": 8,
+        "room2": 41
+    },
+    {
+        "room1": 17,
+        "weight": 11,
+        "room2": 42
+    },
+    {
+        "room1": 17,
+        "weight": 15,
+        "room2": 44
+    },
+    {
+        "room1": 17,
+        "weight": 11,
+        "room2": 46
+    },
+    {
+        "room1": 18,
+        "weight": 8,
+        "room2": 19
+    },
+    {
+        "room1": 18,
+        "weight": 11,
+        "room2": 27
+    },
+    {
+        "room1": 18,
+        "weight": 10,
+        "room2": 33
+    },
+    {
+        "room1": 18,
+        "weight": 17,
+        "room2": 43
+    },
+    {
+        "room1": 18,
+        "weight": 9,
+        "room2": 47
+    },
+    {
+        "room1": 19,
+        "weight": 1,
+        "room2": 23
+    },
+    {
+        "room1": 19,
+        "weight": 5,
+        "room2": 26
+    },
+    {
+        "room1": 19,
+        "weight": 18,
+        "room2": 27
+    },
+    {
+        "room1": 19,
+        "weight": 12,
+        "room2": 30
+    },
+    {
+        "room1": 19,
+        "weight": 1,
+        "room2": 46
+    },
+    {
+        "room1": 19,
+        "weight": 7,
+        "room2": 48
+    },
+    {
+        "room1": 19,
+        "weight": 5,
+        "room2": 49
+    },
+    {
+        "room1": 20,
+        "weight": 3,
+        "room2": 25
+    },
+    {
+        "room1": 20,
+        "weight": 4,
+        "room2": 26
+    },
+    {
+        "room1": 20,
+        "weight": 19,
+        "room2": 29
+    },
+    {
+        "room1": 20,
+        "weight": 5,
+        "room2": 31
+    },
+    {
+        "room1": 20,
+        "weight": 19,
+        "room2": 39
+    },
+    {
+        "room1": 20,
+        "weight": 9,
+        "room2": 40
+    },
+    {
+        "room1": 20,
+        "weight": 2,
+        "room2": 41
+    },
+    {
+        "room1": 20,
+        "weight": 9,
+        "room2": 44
+    },
+    {
+        "room1": 21,
+        "weight": 3,
+        "room2": 23
+    },
+    {
+        "room1": 21,
+        "weight": 8,
+        "room2": 25
+    },
+    {
+        "room1": 21,
+        "weight": 10,
+        "room2": 28
+    },
+    {
+        "room1": 21,
+        "weight": 16,
+        "room2": 29
+    },
+    {
+        "room1": 21,
+        "weight": 19,
+        "room2": 30
+    },
+    {
+        "room1": 21,
+        "weight": 19,
+        "room2": 33
+    },
+    {
+        "room1": 21,
+        "weight": 16,
+        "room2": 34
+    },
+    {
+        "room1": 21,
+        "weight": 16,
+        "room2": 36
+    },
+    {
+        "room1": 21,
+        "weight": 8,
+        "room2": 37
+    },
+    {
+        "room1": 21,
+        "weight": 14,
+        "room2": 48
+    },
+    {
+        "room1": 22,
+        "weight": 20,
+        "room2": 23
+    },
+    {
+        "room1": 22,
+        "weight": 11,
+        "room2": 36
+    },
+    {
+        "room1": 22,
+        "weight": 16,
+        "room2": 38
+    },
+    {
+        "room1": 22,
+        "weight": 19,
+        "room2": 39
+    },
+    {
+        "room1": 22,
+        "weight": 13,
+        "room2": 42
+    },
+    {
+        "room1": 22,
+        "weight": 11,
+        "room2": 45
+    },
+    {
+        "room1": 22,
+        "weight": 9,
+        "room2": 46
+    },
+    {
+        "room1": 22,
+        "weight": 1,
+        "room2": 47
+    },
+    {
+        "room1": 22,
+        "weight": 5,
+        "room2": 49
+    },
+    {
+        "room1": 23,
+        "weight": 20,
+        "room2": 25
+    },
+    {
+        "room1": 23,
+        "weight": 4,
+        "room2": 29
+    },
+    {
+        "room1": 23,
+        "weight": 8,
+        "room2": 36
+    },
+    {
+        "room1": 23,
+        "weight": 18,
+        "room2": 42
+    },
+    {
+        "room1": 23,
+        "weight": 4,
+        "room2": 44
+    },
+    {
+        "room1": 24,
+        "weight": 9,
+        "room2": 25
+    },
+    {
+        "room1": 24,
+        "weight": 13,
+        "room2": 28
+    },
+    {
+        "room1": 24,
+        "weight": 11,
+        "room2": 35
+    },
+    {
+        "room1": 24,
+        "weight": 5,
+        "room2": 42
+    },
+    {
+        "room1": 24,
+        "weight": 7,
+        "room2": 44
+    },
+    {
+        "room1": 24,
+        "weight": 15,
+        "room2": 48
+    },
+    {
+        "room1": 24,
+        "weight": 8,
+        "room2": 49
+    },
+    {
+        "room1": 25,
+        "weight": 7,
+        "room2": 31
+    },
+    {
+        "room1": 25,
+        "weight": 1,
+        "room2": 37
+    },
+    {
+        "room1": 25,
+        "weight": 16,
+        "room2": 38
+    },
+    {
+        "room1": 25,
+        "weight": 1,
+        "room2": 39
+    },
+    {
+        "room1": 25,
+        "weight": 7,
+        "room2": 45
+    },
+    {
+        "room1": 26,
+        "weight": 17,
+        "room2": 31
+    },
+    {
+        "room1": 26,
+        "weight": 7,
+        "room2": 35
+    },
+    {
+        "room1": 26,
+        "weight": 17,
+        "room2": 47
+    },
+    {
+        "room1": 26,
+        "weight": 17,
+        "room2": 48
+    },
+    {
+        "room1": 26,
+        "weight": 20,
+        "room2": 49
+    },
+    {
+        "room1": 27,
+        "weight": 10,
+        "room2": 28
+    },
+    {
+        "room1": 27,
+        "weight": 4,
+        "room2": 29
+    },
+    {
+        "room1": 27,
+        "weight": 4,
+        "room2": 31
+    },
+    {
+        "room1": 27,
+        "weight": 7,
+        "room2": 34
+    },
+    {
+        "room1": 27,
+        "weight": 10,
+        "room2": 37
+    },
+    {
+        "room1": 27,
+        "weight": 18,
+        "room2": 48
+    },
+    {
+        "room1": 28,
+        "weight": 8,
+        "room2": 30
+    },
+    {
+        "room1": 28,
+        "weight": 14,
+        "room2": 31
+    },
+    {
+        "room1": 28,
+        "weight": 19,
+        "room2": 40
+    },
+    {
+        "room1": 28,
+        "weight": 3,
+        "room2": 43
+    },
+    {
+        "room1": 28,
+        "weight": 8,
+        "room2": 45
+    },
+    {
+        "room1": 29,
+        "weight": 14,
+        "room2": 30
+    },
+    {
+        "room1": 29,
+        "weight": 11,
+        "room2": 36
+    },
+    {
+        "room1": 29,
+        "weight": 7,
+        "room2": 39
+    },
+    {
+        "room1": 29,
+        "weight": 11,
+        "room2": 41
+    },
+    {
+        "room1": 29,
+        "weight": 11,
+        "room2": 42
+    },
+    {
+        "room1": 29,
+        "weight": 15,
+        "room2": 45
+    },
+    {
+        "room1": 29,
+        "weight": 20,
+        "room2": 49
+    },
+    {
+        "room1": 30,
+        "weight": 20,
+        "room2": 31
+    },
+    {
+        "room1": 30,
+        "weight": 16,
+        "room2": 39
+    },
+    {
+        "room1": 31,
+        "weight": 19,
+        "room2": 33
+    },
+    {
+        "room1": 31,
+        "weight": 6,
+        "room2": 34
+    },
+    {
+        "room1": 31,
+        "weight": 3,
+        "room2": 35
+    },
+    {
+        "room1": 31,
+        "weight": 6,
+        "room2": 41
+    },
+    {
+        "room1": 32,
+        "weight": 19,
+        "room2": 34
+    },
+    {
+        "room1": 32,
+        "weight": 18,
+        "room2": 39
+    },
+    {
+        "room1": 32,
+        "weight": 6,
+        "room2": 40
+    },
+    {
+        "room1": 32,
+        "weight": 9,
+        "room2": 41
+    },
+    {
+        "room1": 32,
+        "weight": 7,
+        "room2": 44
+    },
+    {
+        "room1": 32,
+        "weight": 11,
+        "room2": 48
+    },
+    {
+        "room1": 33,
+        "weight": 7,
+        "room2": 35
+    },
+    {
+        "room1": 33,
+        "weight": 7,
+        "room2": 37
+    },
+    {
+        "room1": 33,
+        "weight": 2,
+        "room2": 38
+    },
+    {
+        "room1": 33,
+        "weight": 20,
+        "room2": 39
+    },
+    {
+        "room1": 33,
+        "weight": 1,
+        "room2": 42
+    },
+    {
+        "room1": 33,
+        "weight": 16,
+        "room2": 44
+    },
+    {
+        "room1": 33,
+        "weight": 4,
+        "room2": 45
+    },
+    {
+        "room1": 33,
+        "weight": 1,
+        "room2": 47
+    },
+    {
+        "room1": 33,
+        "weight": 11,
+        "room2": 48
+    },
+    {
+        "room1": 34,
+        "weight": 10,
+        "room2": 39
+    },
+    {
+        "room1": 34,
+        "weight": 12,
+        "room2": 42
+    },
+    {
+        "room1": 34,
+        "weight": 11,
+        "room2": 46
+    },
+    {
+        "room1": 35,
+        "weight": 2,
+        "room2": 37
+    },
+    {
+        "room1": 35,
+        "weight": 2,
+        "room2": 40
+    },
+    {
+        "room1": 35,
+        "weight": 17,
+        "room2": 41
+    },
+    {
+        "room1": 35,
+        "weight": 6,
+        "room2": 42
+    },
+    {
+        "room1": 35,
+        "weight": 20,
+        "room2": 44
+    },
+    {
+        "room1": 36,
+        "weight": 11,
+        "room2": 39
+    },
+    {
+        "room1": 36,
+        "weight": 13,
+        "room2": 40
+    },
+    {
+        "room1": 36,
+        "weight": 3,
+        "room2": 41
+    },
+    {
+        "room1": 36,
+        "weight": 7,
+        "room2": 46
+    },
+    {
+        "room1": 36,
+        "weight": 11,
+        "room2": 48
+    },
+    {
+        "room1": 37,
+        "weight": 10,
+        "room2": 42
+    },
+    {
+        "room1": 37,
+        "weight": 4,
+        "room2": 45
+    },
+    {
+        "room1": 37,
+        "weight": 19,
+        "room2": 47
+    },
+    {
+        "room1": 38,
+        "weight": 7,
+        "room2": 40
+    },
+    {
+        "room1": 38,
+        "weight": 4,
+        "room2": 43
+    },
+    {
+        "room1": 38,
+        "weight": 15,
+        "room2": 47
+    },
+    {
+        "room1": 38,
+        "weight": 15,
+        "room2": 48
+    },
+    {
+        "room1": 39,
+        "weight": 15,
+        "room2": 41
+    },
+    {
+        "room1": 39,
+        "weight": 13,
+        "room2": 45
+    },
+    {
+        "room1": 39,
+        "weight": 15,
+        "room2": 46
+    },
+    {
+        "room1": 40,
+        "weight": 14,
+        "room2": 44
+    },
+    {
+        "room1": 40,
+        "weight": 8,
+        "room2": 45
+    },
+    {
+        "room1": 40,
+        "weight": 2,
+        "room2": 47
+    },
+    {
+        "room1": 41,
+        "weight": 15,
+        "room2": 44
+    },
+    {
+        "room1": 41,
+        "weight": 14,
+        "room2": 45
+    },
+    {
+        "room1": 42,
+        "weight": 17,
+        "room2": 49
+    },
+    {
+        "room1": 43,
+        "weight": 12,
+        "room2": 46
+    },
+    {
+        "room1": 43,
+        "weight": 19,
+        "room2": 48
+    },
+    {
+        "room1": 43,
+        "weight": 5,
+        "room2": 49
+    },
+    {
+        "room1": 44,
+        "weight": 13,
+        "room2": 45
+    },
+    {
+        "room1": 45,
+        "weight": 20,
+        "room2": 47
+    },
+    {
+        "room1": 45,
+        "weight": 9,
+        "room2": 48
+    },
+    {
+        "room1": 45,
+        "weight": 2,
+        "room2": 49
+    }
+]
