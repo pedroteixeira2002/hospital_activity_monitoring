@@ -16,11 +16,11 @@ public class Edge {
     /**
      * The first room of the edge
      */
-    private final int room1;
+    private final Room room1;
     /**
      * The second room of the edge
      */
-    private final int room2;
+    private final Room room2;
 
     /**
      * Constructor of the class Edge
@@ -28,7 +28,7 @@ public class Edge {
      * @param room2 the second room
      * @param weight the weight of the edge
      */
-    public Edge(int room1, int room2, double weight) {
+    public Edge(Room room1, Room room2, double weight) {
         this.weight = weight;
         this.room1 = room1;
         this.room2 = room2;
@@ -46,7 +46,7 @@ public class Edge {
      * Get the first room of the edge
      * @return the first room of the edge
      */
-    public int getRoom1() {
+    public Room getRoom1() {
         return room1;
     }
 
@@ -54,7 +54,7 @@ public class Edge {
      * Get the second room of the edge
      * @return the second room of the edge
      */
-    public int getRoom2() {
+    public Room getRoom2() {
         return room2;
     }
 

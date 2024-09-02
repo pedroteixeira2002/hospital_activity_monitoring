@@ -5,7 +5,6 @@ import collections.lists.UnorderedListADT;
 import hospital.enums.TypeOfFunction;
 import hospital.enums.TypeOfRoom;
 
-
 import java.io.IOException;
 
 import static hospital.menu.ReadInfo.manageAccess;
@@ -50,6 +49,11 @@ public class Room {
      */
     private UnorderedListADT<TypeOfFunction> access;
 
+    /**
+     * The list of events that take place in the room
+     */
+    private UnorderedListADT<Event> events;
+
    /* public Room(String name, TypeOfRoom type, int capacity, UnorderedListADT<TypeOfFunction> access) {
         this.id = idCounter++;
         this.name = name;
@@ -59,7 +63,6 @@ public class Room {
         this.occupied = false;
         this.access = access;
     }*/
-
 
     /**
      * Constructor of the class Room
@@ -81,6 +84,7 @@ public class Room {
         this.capacity = capacity;
         this.type = type;
         this.name = name;
+        this.events = new UnorderedLinkedList<>();
     }
 
     /**
@@ -173,6 +177,23 @@ public class Room {
         this.occupied = occupied;
     }
 
+    /**
+     * List of the events that take place in the room
+     *
+     * @return the event list
+     */
+    public UnorderedListADT<Event> getEvents() {
+        return events;
+    }
+
+    /**
+     * Add an event to the room
+     *
+     * @param event the event to add
+     */
+    public void addEvent(Event event) {
+        this.events.addToRear(event);
+    }
 
     /**
      * Add a type of function to access the room
@@ -182,7 +203,6 @@ public class Room {
     public void addAccess(TypeOfFunction function) {
         this.access.addToRear(function);
     }
-
 
     /**
      * Remove a type of function from the room access

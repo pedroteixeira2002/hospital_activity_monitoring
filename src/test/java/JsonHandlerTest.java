@@ -4,6 +4,7 @@ import collections.queues.LinkedQueue;
 import collections.queues.QueueADT;
 import hospital.*;
 import hospital.enums.TypeOfFunction;
+import hospital.enums.TypeOfRoom;
 import hospital.exceptions.ImportException;
 import hospital.io.JsonHandler;
 import org.junit.jupiter.api.*;
@@ -162,6 +163,7 @@ class JsonHandlerTest {
     @Test
     void testImportMap() throws IOException, ImportException {
         Hospital hospital = new Hospital();
+
         // Create a temporary JSON file for map data
         File tempFile = File.createTempFile("map", ".json");
         tempFile.deleteOnExit();
@@ -171,12 +173,12 @@ class JsonHandlerTest {
         }
 
         // Run importMap
-        Network<Integer> network = JsonHandler.importMap(hospital, tempFile.getAbsolutePath());
+        Network<Room> network = JsonHandler.importMap(hospital, tempFile.getAbsolutePath());
 
         // Verify if the network was created correctly
         assertNotNull(network);
-        assertTrue(network.containsVertex(1));
-        assertTrue(network.containsVertex(2));
-        assertTrue(network.edgeExists(1, 2));
+        assertTrue(network.containsVertex(hospital.getRoomById(1)));
+        assertTrue(network.containsVertex(hospital.getRoomById(2)));
+        assertTrue(network.edgeExists(hospital.getRoomById(1), hospital.getRoomById(2)));
     }
 }

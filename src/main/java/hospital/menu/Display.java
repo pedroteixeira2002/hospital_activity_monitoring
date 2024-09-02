@@ -32,12 +32,13 @@ public class Display {
      */
     public static String roomMenu() {
         return " ____________________________________________________________________\n" +
-                "|                              New Room                             |\n" +
+                "|                        Room Management                            |\n" +
                 "|___________________________________________________________________|\n" +
                /* "| 1. New room                                                       |\n" +
                 "| 2. Export room to file                                            |\n" +*/
                 "| 1. See all rooms                                                  |\n" +
                 "| 2. Manage Room Access                                             |\n" +
+                "| 3. View Room Activity                                             |\n" +
                 "| 0. Exit                                                           |\n" +
                 "|___________________________________________________________________|\n";
 
@@ -70,6 +71,7 @@ public class Display {
                 "| 1. New individual                                                 |\n" +
                 "| 2. Export individuals to file                                     |\n" +
                 "| 3. See all individuals                                            |\n" +
+                "| 4. Get all activity from individual                               |\n" +
                 "| 0. Exit                                                           |\n" +
                 "|___________________________________________________________________|\n";
     }

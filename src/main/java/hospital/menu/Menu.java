@@ -115,7 +115,8 @@ public class Menu {
                         System.out.println("Enter room ID: ");
                         id = getInt();
                     }
-                    Room room = hospital.getRoomById(getInt());
+                    Room room = hospital.getRoomById(id);
+                    System.out.println(room);
 
 
                     System.out.println(Display.displayAccess());
@@ -125,9 +126,11 @@ public class Menu {
                     switch (choice2) {
                         case 1:
                             room.addAccess(manageAccess());
+                            System.out.println(room);
                             break;
                         case 2:
                             room.revokeAccess();
+                            System.out.println(room);
                             break;
                         case 0:
                             isRunning = false;
@@ -137,6 +140,17 @@ public class Menu {
                             break;
                     }
                     break;
+                case 3:
+                    System.out.println("Choose a room to view activity: ");
+                    id = getInt();
+                    while (hospital.getRoomById(id) == null) {
+                        System.out.println("Room not found.");
+                        System.out.println("Enter room ID: ");
+                        id = getInt();
+                    }
+                    room = hospital.getRoomById(id);
+                    System.out.println(room);
+                    System.out.println(room.getEvents());
                 case 0:
                     isRunning = false;
                     break;
@@ -185,10 +199,18 @@ public class Menu {
                     System.out.println("See all individuals");
                     System.out.println(hospital.getPeople());
                     break;
-
+                case 4:
+                    System.out.println("Enter the individual ID");
+                    id = getInt();
+                    while (hospital.getPersonById(id) == null) {
+                        System.out.println("Person not found.");
+                        System.out.println("Enter individual ID: ");
+                        id = getInt();
+                    }
+                    System.out.println(hospital.getPersonById(id).getActivity());
+                    break;
                 case 0:
                     isRunning = false;
-                    System.out.println("Goodbye!");
                     break;
                 default:
                     System.out.println("Invalid option, please choose a valid option.");

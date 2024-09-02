@@ -3,14 +3,11 @@ package hospital.io;
 import collections.graphs.Network;
 import collections.lists.UnorderedLinkedList;
 import collections.lists.UnorderedListADT;
-import hospital.Room;
+import hospital.*;
 import hospital.enums.TypeOfFunction;
 import hospital.enums.TypeOfRoom;
-import hospital.Hospital;
-import hospital.Person;
-import hospital.Event;
-import hospital.Edge;
 import hospital.exceptions.ImportException;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -40,12 +37,11 @@ public class JsonHandler {
         JSONParser parser = new JSONParser();
 
         try (FileReader reader = new FileReader(filename)) {
-            // Read JSON file
+
             Object obj = parser.parse(reader);
 
             JSONArray roomList = (JSONArray) obj;
 
-            // Parse each room object
             for (Object roomObj : roomList) {
                 JSONObject roomJson = (JSONObject) roomObj;
 
@@ -64,7 +60,6 @@ public class JsonHandler {
                     access.addToRear(TypeOfFunction.valueOf(accessStr.toUpperCase()));
                 }
 
-                // Create Room object
                 Room room = new Room(id, access, currentOccupation, occupied, capacity, type, name);
                 hospital.addRoom(room);
 
@@ -153,44 +148,46 @@ public class JsonHandler {
         JSONParser jsonParser = new JSONParser();
 
         try (FileReader reader = new FileReader(filename)) {
-            // Parse the JSON file
+
             JSONArray eventsArray = (JSONArray) jsonParser.parse(reader);
 
-            // Iterate over the events array
             for (Object obj : eventsArray) {
                 JSONObject eventObject = (JSONObject) obj;
 
-                // Extract Event fields
                 int personId = ((Long) eventObject.get("personId")).intValue();
                 int fromRoomId = ((Long) eventObject.get("fromRoomId")).intValue();
                 int toRoomId = ((Long) eventObject.get("toRoomId")).intValue();
                 String timeStr = (String) eventObject.get("time");
 
-                // Convert string time to LocalDateTime
                 LocalDateTime time = LocalDateTime.parse(timeStr, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
 
-                // Find Person and Room objects by their IDs
-                Person person = hospital.getPersonById(personId); // Assuming you have a way to find a person by their ID
-                Room fromRoom = hospital.getRoomById(fromRoomId); // Assuming you have a way to find a room by its ID
-                Room toRoom = hospital.getRoomById(toRoomId); // Assuming you have a way to find a room by its ID
+                Person person = hospital.getPersonById(personId);
+                Room fromRoom = hospital.getRoomById(fromRoomId);
+                Room toRoom = hospital.getRoomById(toRoomId);
 
                 if (person == null) {
                     System.err.println("Warning: Person with ID " + personId + " not found. Skipping event.");
-                    continue; // Skip this event if the person is not found
+                    continue;
                 }
 
                 if (fromRoom == null) {
                     System.err.println("Warning: From Room with ID " + fromRoomId + " not found. Skipping event.");
-                    continue; // Skip this event if the from room is not found
+                    continue;
                 }
 
                 if (toRoom == null) {
                     System.err.println("Warning: To Room with ID " + toRoomId + " not found. Skipping event.");
-                    continue; // Skip this event if the to room is not found
+                    continue;
                 }
 
                 // Create an Event object
                 Event event = new Event(person, fromRoom, toRoom, time);
+
+                //Add event to room activity
+                toRoom.addEvent(event);
+
+                // Add the Event to the Person
+                person.getActivity().addToRear(event);
 
                 // Add the Event to the Hospital
                 hospital.addEvent(event);
@@ -244,33 +241,30 @@ public class JsonHandler {
      * @param filename The name of the file to import
      * @return The network of the hospital
      * @throws FileNotFoundException If it not finds the file
-     * @throws ImportException   If there is an error reading the file or parsing the JSON content
+     * @throws ImportException       If there is an error reading the file or parsing the JSON content
      */
-    public static Network<Integer> importMap(Hospital hospital, String filename) throws FileNotFoundException, ImportException {
+    public static Network<Room> importMap(Hospital hospital, String filename) throws FileNotFoundException, ImportException {
         JSONParser jsonParser = new JSONParser();
-        Network<Integer> network = new Network<>();
+        Network<Room> network = new Network<>();
 
         try (FileReader fileReader = new FileReader(filename)) {
             JSONArray edgesArray = (JSONArray) jsonParser.parse(fileReader);
             for (Object obj : edgesArray) {
 
-
                 JSONObject edgeObject = (JSONObject) obj;
                 int room1 = ((Long) edgeObject.get("room1")).intValue();
                 int room2 = ((Long) edgeObject.get("room2")).intValue();
 
-                if (!network.containsVertex(room1)) {
-                    network.addVertex(room1);
+                if (!network.containsVertex(hospital.getRoomById(room1))) {
+                    network.addVertex(hospital.getRoomById(room1));
                 }
-                if (!network.containsVertex(room2)) {
-                    network.addVertex(room2);
+                if (!network.containsVertex(hospital.getRoomById(room2))) {
+                    network.addVertex(hospital.getRoomById(room2));
                 }
 
                 double weight = ((Long) edgeObject.get("weight")).doubleValue();
-                network.addEdge(room1, room2, weight);
-                network.addEdge(room2, room1, weight);
-                hospital.getEdges().addToRear(new Edge(room1, room2, weight));
-                hospital.getEdges().addToRear(new Edge(room2, room1, weight));
+                network.addEdge(hospital.getRoomById(room1), hospital.getRoomById(room2), weight);
+                network.addEdge(hospital.getRoomById(room2), hospital.getRoomById(room1), weight);
             }
         } catch (IOException e) {
             // Wrap IOException in a custom exception with a meaningful message

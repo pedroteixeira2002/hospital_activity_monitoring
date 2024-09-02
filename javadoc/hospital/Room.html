@@ -144,24 +144,34 @@ loadScripts(document, 'script');</script>
 <div class="block">Add a type of function to access the room</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decreaseOccupation()" class="member-name-link">decreaseOccupation</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addEvent(hospital.Event)" class="member-name-link">addEvent</a><wbr>(<a href="Event.html" title="class in hospital">Event</a>&nbsp;event)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Add an event to the room</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#decreaseOccupation()" class="member-name-link">decreaseOccupation</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Decrement the room occupation</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>collections.lists.UnorderedListADT<wbr>&lt;<a href="enums/TypeOfFunction.html" title="enum class in hospital.enums">TypeOfFunction</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccess()" class="member-name-link">getAccess</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>collections.lists.UnorderedListADT<wbr>&lt;<a href="enums/TypeOfFunction.html" title="enum class in hospital.enums">TypeOfFunction</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAccess()" class="member-name-link">getAccess</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the list of functions who have access to the room</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCapacity()" class="member-name-link">getCapacity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the room capacity</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentOccupation()" class="member-name-link">getCurrentOccupation</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCurrentOccupation()" class="member-name-link">getCurrentOccupation</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the room current occupation</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>collections.lists.UnorderedListADT<wbr>&lt;<a href="Event.html" title="class in hospital">Event</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEvents()" class="member-name-link">getEvents</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">List of the events that take place in the room</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>final int</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
@@ -349,6 +359,28 @@ loadScripts(document, 'script');</script>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>occupied</code> - the room occupied status</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEvents()">
+<h3>getEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">collections.lists.UnorderedListADT&lt;<a href="Event.html" title="class in hospital">Event</a>&gt;</span>&nbsp;<span class="element-name">getEvents</span>()</div>
+<div class="block">List of the events that take place in the room</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the event list</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addEvent(hospital.Event)">
+<h3>addEvent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEvent</span><wbr><span class="parameters">(<a href="Event.html" title="class in hospital">Event</a>&nbsp;event)</span></div>
+<div class="block">Add an event to the room</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>event</code> - the event to add</dd>
 </dl>
 </section>
 </li>

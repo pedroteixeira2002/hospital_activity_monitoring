@@ -1,5 +1,7 @@
 package hospital;
 
+import collections.lists.UnorderedLinkedList;
+import collections.lists.UnorderedListADT;
 import hospital.enums.TypeOfFunction;
 
 /**
@@ -31,6 +33,10 @@ public class Person {
     private Room location;
 
     /**
+     * The person activity in the hospital
+     */
+    private UnorderedListADT activity;
+    /**
      * Constructor of the class
      *
      * @param id the person id
@@ -45,8 +51,8 @@ public class Person {
         this.age = age;
         this.function = function;
         this.location = location;
+        this.activity = new UnorderedLinkedList();
     }
-
 
     /**
      * Get the person id
@@ -82,6 +88,15 @@ public class Person {
      */
     public String getName() {
         return name;
+    }
+
+    /**
+     * Get the person activity
+     *
+     * @return the person activity
+     */
+    public UnorderedListADT getActivity() {
+        return activity;
     }
 
     /**
