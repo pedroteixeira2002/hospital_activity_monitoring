@@ -38,7 +38,6 @@ public class ReadInfo {
      * @throws IOException If the integer is not in conformity.
      */
     public static TypeOfFunction manageAccess() throws IOException {
-        //display all available typeofunction with their corresponding indices
         System.out.println("Please choose a function type from the list below: ");
         TypeOfFunction[] functionTypes = TypeOfFunction.values();
         for (int i = 0; i < functionTypes.length; i++) {

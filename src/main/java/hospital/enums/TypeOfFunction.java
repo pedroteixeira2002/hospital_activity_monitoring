@@ -35,11 +35,12 @@ public enum TypeOfFunction {
 
     /**
      * The display name of the enum constant
-      */
+     */
     private final String displayName;
 
     /**
      * Constructor to initialize the display name for each enum constant
+     *
      * @param displayName
      */
     TypeOfFunction(String displayName) {

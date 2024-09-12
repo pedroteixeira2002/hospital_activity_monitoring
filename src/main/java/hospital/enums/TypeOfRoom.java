@@ -103,6 +103,7 @@ public enum TypeOfRoom {
 
     /**
      * Constructor to initialize the display name for each enum constant
+     *
      * @param displayName
      */
     TypeOfRoom(String displayName) {

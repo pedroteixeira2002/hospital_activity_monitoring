@@ -6,7 +6,6 @@ package hospital;
  * The weight represents the distance between the rooms.
  * The rooms are represented by their id.
  * The edge is bidirectional, so it connects two rooms.
- *
  */
 public class Edge {
     /**
@@ -24,8 +23,9 @@ public class Edge {
 
     /**
      * Constructor of the class Edge
-     * @param room1 the first room
-     * @param room2 the second room
+     *
+     * @param room1  the first room
+     * @param room2  the second room
      * @param weight the weight of the edge
      */
     public Edge(Room room1, Room room2, double weight) {
@@ -36,6 +36,7 @@ public class Edge {
 
     /**
      * Get the weight of the edge
+     *
      * @return the weight of the edge
      */
     public double getWeight() {
@@ -44,6 +45,7 @@ public class Edge {
 
     /**
      * Get the first room of the edge
+     *
      * @return the first room of the edge
      */
     public Room getRoom1() {
@@ -52,6 +54,7 @@ public class Edge {
 
     /**
      * Get the second room of the edge
+     *
      * @return the second room of the edge
      */
     public Room getRoom2() {

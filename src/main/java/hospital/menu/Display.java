@@ -124,6 +124,7 @@ public class Display {
 
     /**
      * This method returns a string that is used to display the map menu.
+     *
      * @return a visual representation of the menu
      */
     public static String displayMapMenu() {

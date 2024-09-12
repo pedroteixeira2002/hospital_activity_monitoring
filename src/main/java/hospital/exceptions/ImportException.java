@@ -6,10 +6,11 @@ package hospital.exceptions;
 public class ImportException extends Exception {
     /**
      * Constructor to initialize the exception with a message
-     * @param message The message to be displayed when the exception is thrown
-     * @param cause The cause of the exception
      *
-     * The message to be displayed when the exception is thrown
+     * @param message The message to be displayed when the exception is thrown
+     * @param cause   The cause of the exception
+     *                <p>
+     *                The message to be displayed when the exception is thrown
      */
     public ImportException(String message, Throwable cause) {
         super(message, cause);

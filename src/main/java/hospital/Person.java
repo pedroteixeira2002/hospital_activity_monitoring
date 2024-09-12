@@ -13,44 +13,38 @@ import hospital.enums.TypeOfFunction;
 public class Person {
     /**
      * The person id
-      */
+     */
     private final int id;
     /**
      * The person name
-      */
+     */
     private final String name;
     /**
-     *  The person age
-      */
+     * The person age
+     */
     private final int age;
     /**
      * The person function
-      */
+     */
     private final TypeOfFunction function;
-    /**
-     * The person location
-      */
-    private Room location;
-
     /**
      * The person activity in the hospital
      */
     private UnorderedListADT activity;
+
     /**
      * Constructor of the class
      *
-     * @param id the person id
-     * @param name the person name
-     * @param age the person age
+     * @param id       the person id
+     * @param name     the person name
+     * @param age      the person age
      * @param function the person function in the hospital
-     * @param location the person location in the hospital (room)
      **/
-    public Person(int id, String name, int age, TypeOfFunction function, Room location) {
+    public Person(int id, String name, int age, TypeOfFunction function) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.function = function;
-        this.location = location;
         this.activity = new UnorderedLinkedList();
     }
 
@@ -61,24 +55,6 @@ public class Person {
      */
     public int getId() {
         return id;
-    }
-
-    /**
-     * Get the person location
-     *
-     * @return the person location
-     */
-    public Room getLocation() {
-        return location;
-    }
-
-    /**
-     * Set the person location
-     *
-     * @param location the person location
-     */
-    public void setLocation(Room location) {
-        this.location = location;
     }
 
     /**
@@ -95,7 +71,7 @@ public class Person {
      *
      * @return the person activity
      */
-    public UnorderedListADT getActivity() {
+    public UnorderedListADT<Event> getActivity() {
         return activity;
     }
 
@@ -124,7 +100,6 @@ public class Person {
                 "\nName : \t" + name +
                 "\nAge :\t" + age +
                 "\nFunction :\t" + function +
-                "\nLocation :\t" + location +
                 "\n----------------------------------------------\n";
 
     }

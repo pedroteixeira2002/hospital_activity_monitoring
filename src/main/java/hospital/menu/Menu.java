@@ -1,5 +1,6 @@
 package hospital.menu;
 
+import hospital.Event;
 import hospital.Hospital;
 import hospital.Person;
 import hospital.Room;
@@ -7,6 +8,7 @@ import hospital.enums.TypeOfFunction;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Iterator;
 
 import static hospital.io.JsonHandler.exportEvents;
 import static hospital.io.JsonHandler.exportPeople;
@@ -56,7 +58,7 @@ public class Menu {
                         id = getInt();
                     }
                     Person person = hospital.getPersonById(id);
-                    System.out.println(person.getLocation());
+                    System.out.println(person.getActivity().last().to());
                     break;
                 case 6:
                     System.out.println("Choose the room to where you are: ");
@@ -105,7 +107,11 @@ public class Menu {
                     break;*/
                 case 1:
                     System.out.println("See all rooms");
-                    System.out.println(hospital.getRooms());
+                    Iterator<Room> it = hospital.getAllRooms().iterator();
+                    while(it.hasNext()) {
+                        Room room = it.next();
+                        System.out.println(room);
+                    }
                     break;
                 case 2:
                     System.out.println("Choose a room to manage access: ");
@@ -190,14 +196,14 @@ public class Menu {
                     System.out.println("Enter the individual function");
                     TypeOfFunction function = manageAccess();
 
-                    hospital.addPerson(new Person(id, name, age, function, hospital.getRoomById(0)));
+                    hospital.getRoomById(0).addPerson(new Person(id, name, age, function));
                     break;
                 case 2:
                     exportPeople(hospital, "src/main/resources/people.json");
                     break;
                 case 3:
                     System.out.println("See all individuals");
-                    System.out.println(hospital.getPeople());
+                    System.out.println(hospital.getAllPeople());
                     break;
                 case 4:
                     System.out.println("Enter the individual ID");
@@ -232,13 +238,17 @@ public class Menu {
             int choice = getInt();
             switch (choice) {
                 case 1:
-                    hospital.addEvent(hospital.readEvent());
+                   Event event = hospital.readEvent();
+                   if (event.getTo().addEvent(event))
+                          System.out.println(event.getPerson().getName() +
+                                  " moved from " + event.getFrom().getName() +
+                                  " to " + event.getTo().getName());
                     break;
                 case 2:
                     exportEvents(hospital, "src/main/resources/events.json");
                     break;
                 case 3:
-                    System.out.println(hospital.getEvents());
+                    System.out.println(hospital.getAllEvents());
                     break;
                 case 0:
                     isRunning = false;

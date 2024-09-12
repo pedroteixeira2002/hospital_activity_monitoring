@@ -6,6 +6,8 @@ import hospital.enums.TypeOfFunction;
 import hospital.enums.TypeOfRoom;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Iterator;
 
 import static hospital.menu.ReadInfo.manageAccess;
 
@@ -23,7 +25,7 @@ public class Room {
     /**
      * The room id
      */
-    private final int id;
+    private int id;
     /**
      * The room name
      */
@@ -48,21 +50,14 @@ public class Room {
      * The list of people who have access to the room
      */
     private UnorderedListADT<TypeOfFunction> access;
-
     /**
      * The list of events that take place in the room
      */
     private UnorderedListADT<Event> events;
-
-   /* public Room(String name, TypeOfRoom type, int capacity, UnorderedListADT<TypeOfFunction> access) {
-        this.id = idCounter++;
-        this.name = name;
-        this.type = type;
-        this.capacity = capacity;
-        this.currentOccupation = 0;
-        this.occupied = false;
-        this.access = access;
-    }*/
+    /**
+     * The people in the room
+     */
+    private UnorderedListADT<Person> peopleInRoom;
 
     /**
      * Constructor of the class Room
@@ -85,6 +80,7 @@ public class Room {
         this.type = type;
         this.name = name;
         this.events = new UnorderedLinkedList<>();
+        this.peopleInRoom = new UnorderedLinkedList<>();
     }
 
     /**
@@ -98,6 +94,7 @@ public class Room {
         this.currentOccupation = 0;
         this.occupied = false;
         this.access = new UnorderedLinkedList<>();
+        this.peopleInRoom = new UnorderedLinkedList<>();
     }
 
     /**
@@ -107,6 +104,15 @@ public class Room {
      */
     public final int getId() {
         return id;
+    }
+
+    /**
+     * Set the room id
+     *
+     * @param id the room id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
@@ -125,6 +131,15 @@ public class Room {
      */
     public TypeOfRoom getType() {
         return type;
+    }
+
+    /**
+     * Get the people in the room
+     *
+     * @return the people in the room
+     */
+    public UnorderedListADT<Person> getPeopleInRoom() {
+        return peopleInRoom;
     }
 
     /**
@@ -190,9 +205,13 @@ public class Room {
      * Add an event to the room
      *
      * @param event the event to add
+     *
+     * @return true if the event was added, false otherwise
      */
-    public void addEvent(Event event) {
-        this.events.addToRear(event);
+    public boolean addEvent(Event event) {
+    this.events.addToRear(event);
+    this.peopleInRoom.addToRear(event.getPerson());
+    return true;
     }
 
     /**
@@ -202,6 +221,28 @@ public class Room {
      */
     public void addAccess(TypeOfFunction function) {
         this.access.addToRear(function);
+    }
+
+    /**
+     * Add a person to the room
+     *
+     * @param person the person to add
+     */
+    public void addPerson(Person person) {
+        this.peopleInRoom.addToRear(person);
+    }
+
+    /**
+     * Remove a person from the room
+     *
+     * @param person the person to remove
+     */
+    public void removePerson(Person person) {
+        if (peopleInRoom.isEmpty()) {
+            System.out.println("No personnel currently in " + getName());
+            return;
+        }
+        this.peopleInRoom.remove(person);
     }
 
     /**
@@ -243,6 +284,57 @@ public class Room {
 
     }
 
+    /**
+     * Detects contacts of a person within a specified date range.
+     *
+     * @param id   The ID of the person to check contacts for.
+     * @param from The start of the date range.
+     * @param to   The end of the date range.
+     * @return A list of IDs of people who were in the same room within the specified time frame.
+     */
+    public UnorderedListADT<Person> hadContactWithIndividual(int id, LocalDateTime from, LocalDateTime to) {
+
+        UnorderedListADT<Person> contacts = new UnorderedLinkedList<>();
+        Iterator<Event> eventsIterator = this.events.iterator();
+        while (eventsIterator.hasNext()) {
+            Event event = eventsIterator.next();
+            if (event.getPerson().getId() != id && event.getTime().isAfter(from) && event.getTime().isBefore(to))
+                contacts.addToRear(event.getPerson());
+        }
+        if (contacts.isEmpty()) {
+            System.out.println("No contacts found");
+        }
+        return contacts;
+    }
+
+    /**
+     * Detects all people who had contact with a room within a specified date range.
+     *
+     * @param from The start of the date range.
+     * @param to   The end of the date range.
+     * @return A list of people who were in the room within the specified time frame.
+     */
+    public UnorderedListADT<Person> hadContactWithRoom(LocalDateTime from, LocalDateTime to) {
+        UnorderedListADT<Person> contacts = new UnorderedLinkedList<>();
+        Iterator<Event> eventsIterator = this.events.iterator();
+        while (eventsIterator.hasNext()) {
+            Event event = eventsIterator.next();
+            if (event.getTime().isAfter(from) && event.getTime().isBefore(to)) {
+                contacts.addToRear(event.getPerson());
+            }
+        }
+        if (contacts.isEmpty()) {
+            System.out.println("No contacts found");
+        }
+        return contacts;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Room room = (Room) obj;
+        return id == room.id;
+    }
     @Override
     public String toString() {
         return "\n---------------------------------------------" +

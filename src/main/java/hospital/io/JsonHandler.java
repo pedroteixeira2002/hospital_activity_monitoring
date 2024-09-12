@@ -3,11 +3,14 @@ package hospital.io;
 import collections.graphs.Network;
 import collections.lists.UnorderedLinkedList;
 import collections.lists.UnorderedListADT;
-import hospital.*;
+import collections.lists.arrayLists.ArrayUnorderedList;
+import hospital.Event;
+import hospital.Hospital;
+import hospital.Person;
+import hospital.Room;
 import hospital.enums.TypeOfFunction;
 import hospital.enums.TypeOfRoom;
 import hospital.exceptions.ImportException;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -29,11 +32,12 @@ public class JsonHandler {
     /**
      * Imports room data from a JSON file and adds the rooms to the hospital.
      *
-     * @param hospital The hospital where you'll be importing
      * @param filename The name of the file to import
+     *
+     * @return The list of rooms
      */
-    public static void importRooms(Hospital hospital, String filename) {
-
+    public static UnorderedListADT<Room> importRooms(String filename) {
+        UnorderedListADT<Room> rooms = new ArrayUnorderedList<>();
         JSONParser parser = new JSONParser();
 
         try (FileReader reader = new FileReader(filename)) {
@@ -61,12 +65,19 @@ public class JsonHandler {
                 }
 
                 Room room = new Room(id, access, currentOccupation, occupied, capacity, type, name);
-                hospital.addRoom(room);
-
+                // hospital.getHospitalMap().addVertex(room);
+                rooms.addToRear(room);
             }
+
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
+
+        if (rooms.isEmpty()) {
+            System.out.println("No rooms found in the file");
+        }
+
+        return rooms;
     }
 
     /**
@@ -78,7 +89,7 @@ public class JsonHandler {
     public static void exportPeople(Hospital hospital, String filename) {
         JSONArray peopleArray = new JSONArray();
 
-        Iterator<Person> peopleIterator = hospital.getPeople().iterator();
+        Iterator<Person> peopleIterator = hospital.getAllPeople().iterator();
 
         while (peopleIterator.hasNext()) {
             Person person = peopleIterator.next();
@@ -87,7 +98,6 @@ public class JsonHandler {
             personObject.put("name", person.getName());
             personObject.put("age", person.getAge());
             personObject.put("function", person.getFunction().toString());
-            personObject.put("location", person.getLocation().getId());
 
             peopleArray.add(personObject);
         }
@@ -104,38 +114,33 @@ public class JsonHandler {
     /**
      * Imports people data from a JSON file and adds the people to the hospital.
      *
-     * @param hospital The hospital where you'll be importing
      * @param filename The name of the file to import
+     *
+     * @return The list of people
      */
-    public static void importPeople(Hospital hospital, String filename) {
+    public static UnorderedListADT<Person> importPeople(String filename) {
+        UnorderedListADT<Person> people = new UnorderedLinkedList<>();
         JSONParser jsonParser = new JSONParser();
 
         try (FileReader reader = new FileReader(filename)) {
-            // Parse the JSON file
             JSONArray peopleArray = (JSONArray) jsonParser.parse(reader);
-            // Iterate over the people array
             for (Object obj : peopleArray) {
                 JSONObject personObject = (JSONObject) obj;
-                // Extract Person fields
                 int id = ((Long) personObject.get("id")).intValue();
                 String name = (String) personObject.get("name");
                 int age = ((Long) personObject.get("age")).intValue();
-                // Convert the function to match the enum format
                 String functionStr = ((String) personObject.get("function")).toUpperCase();
                 TypeOfFunction function = TypeOfFunction.valueOf(functionStr); // Convert to uppercase
-                // Handle Location (Room)
-                int locationId = ((Long) personObject.get("location")).intValue();
-                Room location = hospital.getRoomById(locationId); // Assuming you have a way to find a room by its ID
                 // Create a Person object
-                Person person = new Person(id, name, age, function, location);
-                // Add the Person to the Hospital
-                hospital.addPerson(person);
+                Person person = new Person(id, name, age, function);
+                people.addToRear(person);
             }
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        return people;
     }
 
     /**
@@ -183,14 +188,18 @@ public class JsonHandler {
                 // Create an Event object
                 Event event = new Event(person, fromRoom, toRoom, time);
 
-                //Add event to room activity
-                toRoom.addEvent(event);
-
                 // Add the Event to the Person
                 person.getActivity().addToRear(event);
 
                 // Add the Event to the Hospital
-                hospital.addEvent(event);
+                toRoom.addEvent(event);
+
+                //remove person from the room he/she came
+                if (!fromRoom.getPeopleInRoom().isEmpty()) {
+                    if (fromRoom.getPeopleInRoom().contains(person))
+                        fromRoom.removePerson(person);
+                }
+
             }
 
         } catch (IOException e) {
@@ -210,22 +219,23 @@ public class JsonHandler {
      */
     public static void exportEvents(Hospital hospital, String filename) {
         JSONArray eventsArray = new JSONArray();
+        UnorderedListADT<Room> allRooms = hospital.getAllRooms();
 
-        // Assuming Hospital class has a method to get all events
-        for (int i = 0; i < hospital.getEvents().size(); i++) {
-            Event event = hospital.getEvents().dequeue();
-            JSONObject eventObject = new JSONObject();
-            eventObject.put("personId", event.getPerson().getId()); // Export Person ID
-            eventObject.put("fromRoomId", event.getFrom().getId()); // Export From Room ID
-            eventObject.put("toRoomId", event.getTo().getId()); // Export To Room ID
-            eventObject.put("time", event.getTime().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)); // Export time in ISO format
-
-            hospital.getEvents().enqueue(event); // Re-add the event to the queue
-
-            eventsArray.add(eventObject);
+        Iterator<Room> roomIterator = allRooms.iterator();
+        while (roomIterator.hasNext()) {
+            Room room = roomIterator.next();
+            Iterator<Event> eventIterator = room.getEvents().iterator();
+            while (eventIterator.hasNext()) {
+                Event event = eventIterator.next();
+                JSONObject eventObject = new JSONObject();
+                eventObject.put("personId", event.getPerson().getId());
+                eventObject.put("fromRoomId", event.getFrom().getId());
+                eventObject.put("toRoomId", event.getTo().getId());
+                eventObject.put("time", event.getTime().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+                eventsArray.add(eventObject);
+            }
         }
 
-        // Write JSON file
         try (FileWriter file = new FileWriter(filename)) {
             file.write(eventsArray.toJSONString());
             file.flush();
@@ -237,35 +247,53 @@ public class JsonHandler {
     /**
      * Imports map data as form of edges from a JSON file and adds the edges to the hospital.
      *
-     * @param hospital The hospital where you'll be importing
      * @param filename The name of the file to import
      * @return The network of the hospital
      * @throws FileNotFoundException If it not finds the file
      * @throws ImportException       If there is an error reading the file or parsing the JSON content
      */
-    public static Network<Room> importMap(Hospital hospital, String filename) throws FileNotFoundException, ImportException {
-        JSONParser jsonParser = new JSONParser();
+    public static Network<Room> importMap(String filename) throws FileNotFoundException, ImportException {
+
+        Iterator<Room> roomIterator = importRooms("src/main/resources/rooms.json").iterator();
+        Iterator<Person> peopleIterator = importPeople("src/main/resources/people.json").iterator();
+
         Network<Room> network = new Network<>();
+        JSONParser jsonParser = new JSONParser();
+        Room room1 = new Room();
+        room1.setId(-1);
+        Room room2 = new Room();
+        room2.setId(-1);
+
+        while (roomIterator.hasNext()) {
+            Room room = roomIterator.next();
+            network.addVertex(room);
+        }
+
+        while (peopleIterator.hasNext()) {
+            Person person = peopleIterator.next();
+            network.getVertex(0).addPerson(person);
+        }
 
         try (FileReader fileReader = new FileReader(filename)) {
             JSONArray edgesArray = (JSONArray) jsonParser.parse(fileReader);
             for (Object obj : edgesArray) {
-
                 JSONObject edgeObject = (JSONObject) obj;
-                int room1 = ((Long) edgeObject.get("room1")).intValue();
-                int room2 = ((Long) edgeObject.get("room2")).intValue();
+                int roomId1 = ((Long) edgeObject.get("room1")).intValue();
+                int roomId2 = ((Long) edgeObject.get("room2")).intValue();
 
-                if (!network.containsVertex(hospital.getRoomById(room1))) {
-                    network.addVertex(hospital.getRoomById(room1));
-                }
-                if (!network.containsVertex(hospital.getRoomById(room2))) {
-                    network.addVertex(hospital.getRoomById(room2));
-                }
+                Iterator<Room> newRoomIterator = importRooms("src/main/resources/rooms.json").iterator();
 
+                while (newRoomIterator.hasNext() && room1.getId() != roomId1) {
+                    room1 = newRoomIterator.next();
+                }
+                while (newRoomIterator.hasNext() && room2.getId() != roomId2) {
+                    room2 = newRoomIterator.next();
+                }
                 double weight = ((Long) edgeObject.get("weight")).doubleValue();
-                network.addEdge(hospital.getRoomById(room1), hospital.getRoomById(room2), weight);
-                network.addEdge(hospital.getRoomById(room2), hospital.getRoomById(room1), weight);
+                network.addEdge(room1, room2, weight);
+                network.addEdge(room2, room1, weight);
             }
+
         } catch (IOException e) {
             // Wrap IOException in a custom exception with a meaningful message
             throw new ImportException("Error reading the file: " + filename, e);
